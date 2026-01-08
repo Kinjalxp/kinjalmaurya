@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { User, BookOpen, Mail, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
+import { User, BookOpen, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import pic from './assets/kinjalpicture.png';
 
 // Type definitions
 type TabType = 'about' | 'blog';
@@ -118,14 +119,15 @@ function App() {
             <div className="bg-stone-50 rounded-2xl p-8 md:p-12 mb-8 border border-gray-200 shadow-2xl">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center text-6xl">
-                  👋
+                  <img src= {pic} alt = "pic" className = "w-12 h-20 mt-4"></img>
+                  
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
-                    Hi, I'm <span className="text-black">Your Name</span>
+                    Hi, I'm <span className="text-black">Kinjal Maurya</span>
                   </h2>
                   <p className="text-xl text-black mb-6">
-                    Full Stack Developer • AI Enthusiast • Tech Writer
+                    CS Undergraduate • AI Enthusiast • Tech Writer
                   </p>
                   <div className="flex gap-4 justify-center md:justify-start">
                     {socialLinks.map((link, index) => (
@@ -148,8 +150,8 @@ function App() {
               <div className="bg-gray-100 rounded-2xl p-8 border border-gray-200">
                 <h3 className="text-2xl font-bold mb-4 text-black">About Me</h3>
                 <p className="text-black leading-relaxed mb-4">
-                  I'm a passionate developer with expertise in building modern, scalable web applications. 
-                  I love exploring new technologies and sharing my knowledge through writing and open-source contributions.
+                  I am an undergraduate Computer Science student at Rutgers State University with a strong interest in technology, problem-solving, and continuous learning. My interest in computing began at a young age and has developed through both academic study and hands-on exploration. I am currently pursuing the AWS Cloud Practitioner certification to strengthen my understanding of cloud technologies and scalable systems. Outside of technology, I enjoy reading in my free time, which helps me maintain perspective and encourages thoughtful thinking.
+
                 </p>
                 <p className="text-black leading-relaxed">
                   Currently focused on AI integration, responsive design, and creating exceptional user experiences.
