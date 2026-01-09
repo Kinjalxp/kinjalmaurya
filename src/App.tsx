@@ -38,6 +38,14 @@ interface EducationItem {
   description: string;
 }
 
+interface VolunteeringItem {
+  id: number;
+  name: string;
+  description: string;
+  period: string;
+  duration: string;
+}
+
 function App() {
   const [activeTab, setActiveTab] = useState<TabType>("about");
 
@@ -60,6 +68,32 @@ function App() {
       status: "in-progress",
       description:
         "Currently pursuing a degree in Computer Science. GPA: 3.8/4.0",
+    },
+  ];
+
+  const volunteering: VolunteeringItem[] = [
+    {
+      id: 1,
+      name: "Greenhouse Internship Program",
+      description:
+        "Learned about growing vegetables and how to properly take care of them at John P.  Stevens High School.",
+      period: "Aug 2021 ",
+      duration: "6 hours",
+    },
+    {
+      id: 2,
+      name: "Kumon Math and Reading Center",
+      description:
+        "Facilitated students in their learning at the South Plainfield, NJ, branch.",
+      period: "Oct 2022 - Dec 2023",
+      duration: "88.75 hours",
+    },
+    {
+      id: 3,
+      name: "Ideal Beach Cleanup",
+      description: "Helped clean up the Ideal Beach in Middletown Township, NJ",
+      period: "Aug 2024",
+      duration: "30 hours",
     },
   ];
 
@@ -228,7 +262,7 @@ function App() {
                   </div>
                 </div>
                 {/* Education */}
-                <div className=" rounded-2xl p-8 border border-gray-200">
+                <div className=" rounded-2xl p-8 border border-gray-200 mb-8">
                   <div>
                     <div className="mb-12">
                       <h3 className="text-2xl font-bold mb-4 text-black">
@@ -312,6 +346,57 @@ function App() {
                           </div>
                         ))}
                       </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Achievements */}
+                <div className="mt-12 grid md:grid-cols-1 gap-6">
+                  <div className="bg-gray-100 rounded-2xl p-6 border border-gray-200">
+                    <h3 className="text-2xl font-bold mb-4 text-black">
+                      Key Achievements
+                    </h3>
+                    <ul className="space-y-2 text-black">
+                      <div>
+                        <h2 className="mb-4">
+                          AWS AI Practitioner Certification
+                        </h2>
+                        <h3 className="text-sm mb-4 text-gray-500">Jul 2025</h3>
+                      </div>
+                    </ul>
+                  </div>
+
+                  {/* Volunteering */}
+
+                  <div className=" rounded-2xl p-8 border border-gray-200 mb-8">
+                    <h3 className="text-2xl font-bold mb-4 text-black">
+                      Volunteering
+                    </h3>
+                    <div className="space-y-5">
+                      {volunteering.map((item, index) => (
+                        <div key={item.id} className="relative flex gap-2">
+                          {/* Card */}
+                          <div
+                            className={`flex-1 ${
+                              index === 0 ? "bg-stone-50" : "bg-gray-100"
+                            } rounded-2xl p-8 border border-gray-100 shadow-lg -mt-2`}
+                          >
+                            {/* Content */}
+                            <h3 className="text-xl font-semibold mb-1 text-black">
+                              {item.name}
+                            </h3>
+                            <h4 className="text-md  mb-1 text-black">
+                              {item.description}
+                            </h4>
+                            <p className="text-sm  text-black">
+                              <span>{item.period} </span>
+                              <span className="text-sm mb-1 text-gray-500">
+                                • {item.duration}
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
