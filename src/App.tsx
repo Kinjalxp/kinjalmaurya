@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { User, BookOpen, Mail, Github, Linkedin, Twitter } from 'lucide-react';
-import pic from './assets/kinjalpicture.png';
+import { User, BookOpen, Mail, Github, Linkedin, Twitter, MessageCircle } from 'lucide-react';
+import pic from './assets/kinjalcropped.png';
 
 // Type definitions
 type TabType = 'about' | 'blog';
@@ -118,10 +118,13 @@ function App() {
             {/* Hero Section */}
             <div className="bg-stone-50 rounded-2xl p-8 md:p-12 mb-8 border border-gray-200 shadow-2xl">
               <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center text-6xl">
-                  <img src= {pic} alt = "pic" className = "w-12 h-20 mt-4"></img>
-                  
-                </div>
+               <div className="w-64 h-64 rounded-full bg-gray-200 flex items-center justify-center shadow-lg">
+                <img
+                  src={pic}
+                  alt="styled"
+                  className="w-full h-full rounded-full object-cover"
+                />
+              </div>
                 <div className="flex-1 text-center md:text-left">
                   <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black">
                     Hi, I'm <span className="text-black">Kinjal Maurya</span>
@@ -153,9 +156,7 @@ function App() {
                   I am an undergraduate Computer Science student at Rutgers State University with a strong interest in technology, problem-solving, and continuous learning. My interest in computing began at a young age and has developed through both academic study and hands-on exploration. I am currently pursuing the AWS Cloud Practitioner certification to strengthen my understanding of cloud technologies and scalable systems. Outside of technology, I enjoy reading in my free time, which helps me maintain perspective and encourages thoughtful thinking.
 
                 </p>
-                <p className="text-black leading-relaxed">
-                  Currently focused on AI integration, responsive design, and creating exceptional user experiences.
-                </p>
+
               </div>
               
               <div className="bg-stone-50 rounded-2xl p-8 border border-gray-200">
@@ -171,6 +172,12 @@ function App() {
                   ))}
                 </div>
               </div>
+              
+              {/* Education */}
+              <div className = "bg-stone-50 rounded-2xl p-8 border border-gray-200"> 
+                <h3 className = "text-2xl font-bold mb-4 text-black">Education</h3>
+              </div>
+
             </div>
           </div>
         )}
@@ -207,6 +214,17 @@ function App() {
           </div>
         )}
       </main>
+
+      {/* Floating Chat Button (Future Integration Point) */}
+      <button 
+        className="fixed bottom-8 right-8 w-16 h-16 bg-black text-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all z-50"
+        aria-label="Open chat"
+      >
+        <MessageCircle size={28} />
+      </button>
+
+      
+
      </div>
 
     </>
