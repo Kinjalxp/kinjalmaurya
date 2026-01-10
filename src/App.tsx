@@ -5,7 +5,6 @@ import {
   Mail,
   Github,
   Linkedin,
-  Twitter,
   MessageCircle,
   GraduationCap,
 } from "lucide-react";
