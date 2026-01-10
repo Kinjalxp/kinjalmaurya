@@ -137,10 +137,21 @@ function App() {
   ];
 
   const socialLinks: SocialLink[] = [
-    { href: "#", icon: <Github size={24} />, label: "GitHub" },
-    { href: "#", icon: <Linkedin size={24} />, label: "LinkedIn" },
-    { href: "#", icon: <Twitter size={24} />, label: "Twitter" },
-    { href: "#", icon: <Mail size={24} />, label: "Email" },
+    {
+      href: "https://github.com/Kinjalxp?tab=repositories",
+      icon: <Github size={24} />,
+      label: "GitHub",
+    },
+    {
+      href: "https://www.linkedin.com/in/kinjalmxp/",
+      icon: <Linkedin size={24} />,
+      label: "LinkedIn",
+    },
+    {
+      href: "mailto:kinjalmxp@gmail.com",
+      icon: <Mail size={24} />,
+      label: "Email",
+    },
   ];
 
   const handleTabChange = (tab: TabType): void => {
@@ -213,6 +224,7 @@ function App() {
                           <a
                             key={index}
                             href={link.href}
+                            target="_blank"
                             className="p-3 bg-gray-100 rounded-full hover:bg-black hover:text-white transition-all"
                             aria-label={link.label}
                           >
@@ -355,12 +367,12 @@ function App() {
                     <h3 className="text-2xl font-bold mb-4 text-black">
                       Key Achievements
                     </h3>
-                    <div className="border-none border-gray-600 flex flex-row items-center gap-8">
-                      <div className="border-none border-gray-300">
+                    <div className="border-none border-gray-600 flex flex-row items-center gap-1">
+                      <div className="border-none border-gray-300 w-[120px] h-[120px] flex items-center justify-center">
                         <img
                           src={logo}
                           alt="styled"
-                          className="w-[150px] h-[150px]"
+                          className="w-[120px] h-[120px] object-contain"
                         />
                       </div>
                       <div className="border-none border-gray-400">
