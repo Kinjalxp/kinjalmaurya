@@ -10,6 +10,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import pic from "./assets/kinjalcropped.png";
+import logo from "./assets/AIpractitionerLogo.png";
 
 // Type definitions
 type TabType = "about" | "blog";
@@ -62,12 +63,12 @@ function App() {
     {
       id: 2,
       level: "Undergraduate",
-      institution: "Your University Name",
+      institution: "Rutgers State University",
       degree: "Bachelor of Science in Computer Science",
-      period: "2022 - Present",
+      period: "Sep 2025 - May 2029",
       status: "in-progress",
       description:
-        "Currently pursuing a degree in Computer Science. GPA: 3.8/4.0",
+        "Currently pursuing a degree in Computer Science. GPA: 3.7/4.0",
     },
   ];
 
@@ -152,9 +153,7 @@ function App() {
         {/* Header */}
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 py-4">
-            <div className="flex items-center justify-between">
-              <h1 className="text-2xl font-bold text-black">Kinjal Maurya</h1>
-
+            <div className="flex items-center justify-end">
               {/* Navigation */}
               <nav className="flex gap-2">
                 <button
@@ -356,14 +355,27 @@ function App() {
                     <h3 className="text-2xl font-bold mb-4 text-black">
                       Key Achievements
                     </h3>
-                    <ul className="space-y-2 text-black">
-                      <div>
-                        <h2 className="mb-4">
-                          AWS AI Practitioner Certification
-                        </h2>
-                        <h3 className="text-sm mb-4 text-gray-500">Jul 2025</h3>
+                    <div className="border-none border-gray-600 flex flex-row items-center gap-8">
+                      <div className="border-none border-gray-300">
+                        <img
+                          src={logo}
+                          alt="styled"
+                          className="w-[150px] h-[150px]"
+                        />
                       </div>
-                    </ul>
+                      <div className="border-none border-gray-400">
+                        <ul className="space-y-2 text-black">
+                          <div>
+                            <h2 className="mb-4">
+                              AWS AI Practitioner Certification
+                            </h2>
+                            <h3 className="text-sm mb-4 text-gray-500">
+                              Jul 2025
+                            </h3>
+                          </div>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Volunteering */}
