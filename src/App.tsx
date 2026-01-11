@@ -401,7 +401,7 @@ function App() {
                           {/* Card */}
                           <div
                             className={`flex-1 ${
-                              index === 0 ? "bg-stone-50" : "bg-gray-100"
+                              index % 2 === 0 ? "bg-stone-50" : "bg-gray-100"
                             } rounded-2xl p-8 border border-gray-100 shadow-lg -mt-2`}
                           >
                             {/* Content */}
