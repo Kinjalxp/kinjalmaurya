@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Header } from "./components/header";
+import { Header } from "./components/Header";
 import { AboutTab } from "./components/AboutTab";
 import { BlogTab } from "./components/BlogTab";
 import { FloatingChatButton } from "./components/FloatingChatButton";
