@@ -1,7 +1,10 @@
-import React from "react";
-import { BLOG_POSTS } from "../constants";
+import { blogPosts } from "../data/blogData";
 
-export const BlogTab: React.FC = () => {
+interface BlogListProps {
+  onSelectPost: (post: any) => void;
+}
+
+export const BlogTab = ({ onSelectPost }: BlogListProps) => {
   return (
     <div className="animate-fadeIn">
       <div className="mb-8">
@@ -12,9 +15,10 @@ export const BlogTab: React.FC = () => {
       </div>
 
       <div className="grid gap-6">
-        {BLOG_POSTS.map((post) => (
+        {blogPosts.map((post) => (
           <article
             key={post.id}
+            onClick={() => onSelectPost(post)}
             className="bg-gray-100 rounded-2xl p-8 border border-gray-200 hover:border-black transition-all cursor-pointer group"
           >
             <div className="flex items-start justify-between mb-4">
@@ -28,7 +32,7 @@ export const BlogTab: React.FC = () => {
             <div className="flex items-center gap-4 text-sm text-black">
               <span>{post.date}</span>
               <span>•</span>
-              <span>{post.readTime}</span>
+              {/* <span>{post.readTime}</span> */}
             </div>
           </article>
         ))}
