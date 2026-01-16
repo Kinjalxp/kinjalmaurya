@@ -28,29 +28,29 @@ function App() {
 
       <div>
         <nav className="bg-white shadow-md">
-          <div className="max-w-6xl mx-auto px-4 py-4">
-            <div className="flex  justify-end items-center">
-              <div className="flex gap-2">
+          <div className="max-w-6xl mx-auto px-4 py-1">
+            <div className="flex  justify-end items-center py-4">
+              <div className="flex gap-2 ">
                 <button
                   onClick={() => {
                     setActiveTab("about");
                     setSelectedPost(null);
                   }}
-                  className={`px-4 py-2 rounded-md transition-colors flex items-center gap-2  ${
+                  className={`px-8 py-2 rounded-md transition-colors flex items-center gap-2 ${
                     activeTab === "about"
                       ? "bg-black text-white"
                       : "hover:bg-gray-100 text-black"
                   }`}
                 >
                   <User size={18} />
-                  <span className="hidden sm:inline">About Me</span>
+                  <span className="hidden sm:inline"> About Me</span>
                 </button>
                 <button
                   onClick={() => {
                     setActiveTab("blog");
                     setSelectedPost(null);
                   }}
-                  className={`px-4 py-2 rounded-md transition-colors flex items-center gap-2 ${
+                  className={`px-6 py-2 rounded-md transition-colors flex items-center gap-2 ${
                     activeTab === "blog"
                       ? "bg-black text-white"
                       : "hover:bg-gray-100 text-black"
