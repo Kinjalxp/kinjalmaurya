@@ -6,10 +6,10 @@ import BlogPost3 from "../components/blog-posts/BlogPost3";
 export const blogPosts = [
   {
     id: 1,
-    title: "Getting Started with React",
-    date: "January 10, 2025",
+    title: "Why does data matter more than algorithms?",
+    date: "January 16, 2026",
     excerpt:
-      "Learn the fundamentals of React and why it's become the go-to library for building modern user interfaces.",
+      "Learn why quality of data is more important than the complexity of the algorithm",
     component: BlogPost1,
     image:
       "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=250&fit=crop",
