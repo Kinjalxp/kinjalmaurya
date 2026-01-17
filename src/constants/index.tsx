@@ -88,8 +88,7 @@ export const SKILLS = [
   "Python",
   "AI/ML",
   "Tailwind CSS",
-  "Next.js",
-  "MongoDB",
+  "Jupyter",
 ];
 
 export const getSocialLinks = (): SocialLink[] => [
