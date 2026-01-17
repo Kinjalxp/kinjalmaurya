@@ -16,20 +16,19 @@ export const blogPosts = [
   },
   {
     id: 2,
-    title: "Mastering Tailwind CSS",
-    date: "January 8, 2025",
+    title: "Forget the hype—here’s how to actually start an AI career in 2026.",
+    date: "Coming Soon!",
     excerpt:
-      "Discover how Tailwind's utility-first approach can speed up your development workflow.",
+      "If you were waiting for the ‘perfect time’ to start an AI career, 2026 just showed up.",
     component: BlogPost2,
     image:
       "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=400&h=250&fit=crop",
   },
   {
     id: 3,
-    title: "Building Scalable Web Applications",
-    date: "January 5, 2025",
-    excerpt:
-      "Best practices and architectural patterns for creating applications that grow with your needs.",
+    title: "How the Right Prompt Can Change Everything",
+    date: "Coming Soon!",
+    excerpt: "A look at how precise prompts quietly control AI behavior.",
     component: BlogPost3,
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop",
